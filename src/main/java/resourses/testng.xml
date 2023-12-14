@@ -1,0 +1,87 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Tests">
+    <listeners>
+        <listener class-name="org.example.CustomListeners"/>
+    </listeners>
+    <test name="Main">
+        <classes>
+            <class name="org.example.Main">
+                <methods>
+                    <include name="setUp"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Login Test">
+        <classes>
+            <class name="org.example.LoginTest">
+                <methods>
+                    <include name="testSuccessfulLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Configuration Test">
+        <classes>
+            <class name="org.example.ConfigurationTest">
+                <methods>
+                    <include name="testRoleCreation"/>
+                    <include name="testUserCreation"/>
+                    <include name="testUserGroupCreation"/>
+                    <include name="testUserAccess"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Scheduler Test">
+            <classes>
+                <class name="org.example.SchedulerTest">
+                    <methods>
+                        <include name="testSchedulerCreation" />
+<!--                        <include name="testChecklistExecution" />-->
+<!--                        <include name="testLogout" />-->
+<!--                        <include name="testSchedulerExecution" />-->
+<!--                        <include name="testResolutionWorkOrder" />-->
+<!--                        <include name="testTicketStatus" />-->
+<!--                        <include name="testDashBoardWORStatus" />-->
+                    </methods>
+                </class>
+            </classes>
+    </test>
+    <test name="ChecklistExecution Test">
+        <classes>
+            <class name="org.example.ChecklistExecutionTest">
+                <methods>
+                    <include name="testChecklistExecution"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Resolution Work Order Test">
+        <classes>
+            <class name="org.example.ResolutionWorkOrderTest">
+                <methods>
+                    <include name="testChecklistExecution"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="DashBoard Test">
+        <classes>
+            <class name="org.example.DashBoardTest">
+                <methods>
+                    <include name="testDashBoardWORStatus"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Report Test">
+        <classes>
+            <class name="org.example.ReportTest">
+                <methods>
+                    <include name="testReports"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
